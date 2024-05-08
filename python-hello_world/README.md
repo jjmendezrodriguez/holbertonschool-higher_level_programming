@@ -18,7 +18,8 @@ Enjoy!
 
 ## Task:
 
- * 0.Hello, print
+ * 0.Hello, print:
+    
     Printing the script, Programming is like building a multilingual puzzle
 
  * 1.Print integer
