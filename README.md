@@ -2,7 +2,7 @@
 
 ## File:
 
-* [README.md](./python-hello_world/README.md)
+* README.md
 
 ## Directories:
 
