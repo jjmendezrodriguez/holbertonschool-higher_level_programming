@@ -18,6 +18,11 @@
 
         python3 --version
 
+* Pycodestyle.py
+
+        pip install pycodestyle
+
+        pip install --upgrade pycodestyle
 
 ## File:
 
