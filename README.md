@@ -6,7 +6,7 @@
 
 ## Directories:
 
-* python-hello_world
+* [python-hello_world](./python-hello_world/)
 
     This Directory containg the task files:
 
