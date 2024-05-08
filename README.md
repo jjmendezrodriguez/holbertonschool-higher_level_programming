@@ -20,10 +20,13 @@
 
 * Pycodestyle.py
 
+    1-Update Package list:
+
         pip install pycodestyle
 
+    2-install pycodestyle:
 
-        pip install --upgrade pycodestyle
+        psudo apt-get -y install pycodestyle
 
 ## File:
 
