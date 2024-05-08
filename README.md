@@ -35,7 +35,6 @@
 ## Directories:
 
 * [python-hello_world](./python-hello_world/)
-
     This Directory containg the task files:
 
    * [README.md](./python-hello_world/README.md)
