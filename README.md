@@ -1,5 +1,20 @@
 # holbertonschool-higher_level_programming
 
+## Installation need it:
+
+### Linux:
+
+* Python:
+    1-Update Package List:
+         sudo apt update
+    2-Install Python 3:
+
+        sudo apt install python3
+    3- Verify installation:
+
+        python3 --version
+
+
 ## File:
 
 * README.md
