@@ -2,4 +2,4 @@
 str = "Python is an interpreted, interactive, object-oriented programming\
  language that combines remarkable power with very clear syntax"
 words = str.split()
-print(f"{words[5]} {words[6]} with {words[0]}")
+print(f"{words[5]} {words[6]} {words[12]} {words[0]}")
