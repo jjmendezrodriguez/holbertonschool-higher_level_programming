@@ -1,4 +1,6 @@
 #!/usr/bin/python3
 str = "Python is an interpreted, interactive, object-oriented programming\
  language that combines remarkable power with very clear syntax"
-print(str[str.find("object-oriented"):str.find("language")] + "with " + str[:6])
+words = str.split()
+print(f"{words[5]} {words[6]} with {words[0]}")
+print(words)
