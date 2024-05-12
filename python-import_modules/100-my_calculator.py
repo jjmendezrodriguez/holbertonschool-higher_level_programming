@@ -1,20 +1,20 @@
 #!/usr/bin/python3
 from calculator_1 import add, sub, mul, div
-import sys
+from sys import argv, exit
 
 
 def main():
-    for i in sys.argv:
+    for i in argv:
         pass
-    if len(sys.argv) != 4 and not isinstance(int(i), int):
+    if len(argv) != 4 and not isinstance(int(i), int):
         print("Usage: ./100-mycalculator.py <a> <operator> <b>")
-        sys.exit(1)
+        exit(1)
 
-    a = int(sys.argv[1])
-    if len(sys.argv[2]) != 1 and sys.argv[2] not in ['+', '-', '/']:
+    a = int(argv[1])
+    if len(argv[2]) != 1 and argv[2] not in ['+', '-', '/']:
         operator = chr(42)
     else:
-        operator = sys.argv[2]
+        operator = argv[2]
     b = int(i)
 
     result = 0
@@ -28,7 +28,7 @@ def main():
         result = div(a, b)
     else:
         print("Unknown operator. Available operators: +, -, and /")
-        sys.exit(1)
+        exit(1)
 
     print("{} {} {} = {}".format(a, operator, b, result))
 
