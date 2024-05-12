@@ -22,7 +22,7 @@ def main():
         result = add(a, b)
     elif operator == '-':
         result = sub(a, b)
-    elif operator == '*':
+    elif operator == chr(42):
         result = mul(a, b)
     elif operator == '/':
         result = div(a, b)
