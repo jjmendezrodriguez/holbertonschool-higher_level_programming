@@ -5,12 +5,12 @@ from sys import argv, exit
 
 def main():
     if len(argv) < 4:
-        print("./100-mycalculator.py <a> <operator> <b>")
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
     for i in argv:
         pass
     if len(argv) != 4 and not isinstance(int(i), int):
-        print("./100-mycalculator.py <a> <operator> <b>")
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
     a = int(argv[1])
@@ -30,7 +30,7 @@ def main():
     elif operator == '/':
         result = div(a, b)
     else:
-        print("Unknown operator. Available operators: +, -, and /")
+        print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
 
     print("{} {} {} = {}".format(a, operator, b, result))
