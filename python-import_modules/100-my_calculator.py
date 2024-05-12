@@ -5,12 +5,12 @@ from sys import argv, exit
 
 def main():
     if len(argv) < 4:
-        print("Usage: ./100-mycalculator.py <a> <operator> <b>")
+        print("./100-mycalculator.py <a> <operator> <b>")
         exit(1)
     for i in argv:
         pass
     if len(argv) != 4 and not isinstance(int(i), int):
-        print("Usage: ./100-mycalculator.py <a> <operator> <b>")
+        print("./100-mycalculator.py <a> <operator> <b>")
         exit(1)
 
     a = int(argv[1])
