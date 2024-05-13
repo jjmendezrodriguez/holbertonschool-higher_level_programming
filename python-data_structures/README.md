@@ -94,3 +94,7 @@ Function multiple_returns that meets the requirements of returning a tuple conta
 
 ### 9. Find the max
 
+Function max_integer that determines the largest integer in a list without using the built-in max() function and handles the case where the list might be empty, you can iterate through the list manually to find the maximum value.
+
+### 10. Only by 2
+
