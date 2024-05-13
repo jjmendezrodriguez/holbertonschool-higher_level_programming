@@ -99,3 +99,10 @@ Function max_integer that determines the largest integer in a list without using
 ### 10. Only by 2
 
 Function divisible_by_2 that evaluates each element in a list to determine if it is a multiple of 2, and then returns a new list where each element is either True or False corresponding to the result of this check, you can use a list comprehension.
+
+### 11. Delete at
+
+Function modifies the original list when conditions are met, ensuring minimal overhead. It also ensures that the function behaves correctly according to the specified prototype by not altering the list when the index is out of acceptable bounds.
+
+### 12. Switch
+
