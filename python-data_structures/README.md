@@ -90,3 +90,7 @@ Function add_tuple that adds the corresponding elements of two tuples according 
 
 ### 8. More returns!
 
+Function multiple_returns that meets the requirements of returning a tuple containing the length of a string and its first character (or None if the string is empty), you can use conditional expressions to handle the empty string case.
+
+### 9. Find the max
+
