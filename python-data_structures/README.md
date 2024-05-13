@@ -58,3 +58,7 @@ Function that prints all integers from a given list on separate lines using the 
 
 ### 1. Secure access to an element in a list
 
+Function that replaces an element of a list at a specific position, efficiently checks for edge cases involving list indexing and provides a clear, simple approach to element retrieval in lists according to specified rules.
+
+### 2. Replace element
+
