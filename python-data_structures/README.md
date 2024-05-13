@@ -54,7 +54,7 @@ remove(x): Removes the first item whose value is x.
 
 ### 0. Print a list of integers
 
-    Function that prints all integers from a given list on separate lines using the str.format() method without casting integers into strings directly in the print function.
+Function that prints all integers from a given list on separate lines using the str.format() method without casting integers into strings directly in the print function.
 
 ### 1. Secure access to an element in a list
 
