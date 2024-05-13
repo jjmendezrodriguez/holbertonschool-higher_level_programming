@@ -62,3 +62,7 @@ Function that replaces an element of a list at a specific position, efficiently 
 
 ### 2. Replace element
 
+Function effectively guards against out-of-range errors by ensuring that any attempts to modify the list at an invalid index do not alter the list and safely return the original list.
+
+### 3. Print a list of integers... in reverse!
+
