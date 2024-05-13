@@ -50,6 +50,10 @@ remove(x): Removes the first item whose value is x.
 * Boolean Operations: Use of and, or, and not for logical operations.
 * Comparing Different Types: Python handles type comparisons gracefully, raising exceptions where no natural order exists.
 
+## Main Files
+
+The main files are for test the functions.
+
 ## Tasks:
 
 ### 0. Print a list of integers
