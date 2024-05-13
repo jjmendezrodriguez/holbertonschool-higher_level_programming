@@ -28,6 +28,8 @@
 
        sudo apt-get -y install pycodestyle
 
+For extra library ask the professor.      
+
 ## File:
 
 * README.md
@@ -65,13 +67,20 @@
      * [11-pow.py](python-if_else_loops_functions/11-pow.py)
      * [12-fizzbuzz.py](python-if_else_loops_functions/12-fizzbuzz.py)
 
-     The test file are for run some Funcion task.
+     The test files are for run some Funcion on task & advances.
 
-    ## Advances:
+    ### Advances:
 
     * [100-print_tebahpla.py](python-if_else_loops_functions/100-print_tebahpla.py)
     * [101-remove_char_at.py](python-if_else_loops_functions/101-remove_char_at.py)
 
+* [python-import_modules](python-import_modules)
+This Directory contain the task files:
 
+    * [README.md](./python-import_modules/README.md)
+    * [0-add.py](python-import_modules/0-add.py)
+    * [1-calculation.py](python-import_modules/1-calculation.py)
+    * [2-args.py](python-import_modules/2-args.py)
+    * 
 
 
