@@ -106,3 +106,4 @@ Function modifies the original list when conditions are met, ensuring minimal ov
 
 ### 12. Switch
 
+Switch the values of a and b, you can use tuple unpacking, which is a Pythonic way to swap variable values efficiently in a single line.
