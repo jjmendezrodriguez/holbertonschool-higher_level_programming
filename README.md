@@ -22,7 +22,7 @@
 
     1-Update Package list:
 
-        pip install pycodestyle
+       sudo apt update
 
     2-install pycodestyle:
 
