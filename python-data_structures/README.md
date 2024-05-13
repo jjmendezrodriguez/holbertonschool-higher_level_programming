@@ -70,3 +70,15 @@ Function effectively guards against out-of-range errors by ensuring that any att
 
 ### 3. Print a list of integers... in reverse!
 
+Function prints all integers from a given list in reverse order, you can utilize Python's slicing feature to reverse the list and then iterate over the reversed list to print each integer.
+
+### 4. Replace in a copy
+
+Function new_in_list replaces an element at a specified index without modifying the original list, you need to create a copy of the list within the function.
+
+### 5. Can you C me now?
+
+Function that removes all occurrences of the characters 'c' and 'C' from a string without using the str.replace() method, you can use a list comprehension to filter out these characters and then join the list back into a string. Effectively filters out 'c' and 'C' from the input string and constructs a new string from the remaining characters, meeting the requirement to not use str.replace() and to avoid importing any modules.
+
+### 6. Lists of lists = Matrix
+
