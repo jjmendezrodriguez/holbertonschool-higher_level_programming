@@ -82,3 +82,11 @@ Function that removes all occurrences of the characters 'c' and 'C' from a strin
 
 ### 6. Lists of lists = Matrix
 
+Function that prints a matrix of integers without directly converting integers into strings and without importing any modules, you can use Python's string formatting capabilities provided by the str.format() method.Function is a versatile and straightforward way to print matrices of integers formatted correctly in a typical matrix layout. It follows Python's best practices for function implementation without using any external modules.
+
+### 7. Tuples addition
+
+Function add_tuple that adds the corresponding elements of two tuples according to the provided conditions, you can handle the potential variations in tuple sizes directly within the function.
+
+### 8. More returns!
+
