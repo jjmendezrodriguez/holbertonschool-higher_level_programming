@@ -30,6 +30,10 @@
 
 For extra library ask the professor.      
 
+### Propose:
+
+How code using Python, learn the functions and programs. 
+
 ## File:
 
 * README.md
