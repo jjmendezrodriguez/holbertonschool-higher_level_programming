@@ -84,19 +84,19 @@ The main file are used for test the finctions, is a copy from Holberton exercise
 
  * Write a function that prints a dictionary by ordered keys.
 
-7. [Update dictionary]
+7. [Update dictionary](./7-update_dictionary.py)
 
  * Write a function that replaces or adds key/value in a dictionary.
 
-8. Simple delete by key
+8. [Simple delete by key](./8-simple_delete.py)
 
  * Write a function that deletes a key in a dictionary.
 
-9. Multiply by 2
+9. [Multiply by 2](./9-multiply_by_2.py)
 
  * Write a function that returns a new dictionary with all values multiplied by 2
 
-10. Best score
+10. [Best score]()
 
  * Write a function that returns a key with the biggest integer value.
 
