@@ -50,21 +50,25 @@ Learn more data structures and techniques for better programing and skills on py
 
  * They allow for writing cleaner and more Pythonic code, especially when dealing with iterable transformations and operations that require applying a function to multiple elements in an iterable.
 
+## Main files:
+
+    The main file are used for test the finctions, is a copy from Holberton exercise. 
+
 ## Tasks:
 
 0. [Squared simple](./0-square_matrix_simple.py)
 
  * Write a function that computes the square value of all integers of a matrix.
 
-1. Search and replace
+1. [Search and replace](./1-search_replace.py)
 
  * Write a function that replaces all occurrences of an element by another in a new list.
 
-2. Unique addition
+2. [Unique addition](./2-uniq_add.py)
 
  * Write a function that adds all unique integers in a list (only once for each integer).
 
-3. Present in both
+3. [Present in both]()
 
  * Write a function that returns a set of common elements in two sets.
 
