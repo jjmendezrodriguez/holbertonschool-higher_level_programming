@@ -6,13 +6,13 @@ Learn mores data estructures and tecnics for better programing and skills on pyt
 
 ### Lambda Functions
 
-   * Lambda functions are small anonymous functions defined using the lambda keyword.
+   * Lambda functions are small anonymous functions defined using the `lambda` keyword.
 
-   * Syntax: lambda arguments: expression which allows you to implement simple functions in a single line without formally defining a function using def.
+   * Syntax: `lambda arguments: expression` which allows you to implement simple functions in a single line without formally defining a function using `def`.
         
         These are especially useful for short, throwaway functions that are not intended to be used repeatedly.
 
-    ### Map Function
+### Map Function
 
     * The map(func, seq) function applies a function func to all the items in a sequence seq.
 In Python 3, map() returns an iterator, which is more memory efficient than returning a list.
