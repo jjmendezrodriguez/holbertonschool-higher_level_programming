@@ -104,7 +104,7 @@ The main file are used for test the finctions, is a copy from Holberton exercise
 
  * Write a function that returns a list with all values multiplied by a number without using any loops.
 
-12. [Roman to Integer]()
+12. [Roman to Integer](./12-roman_to_int.py)
 
  * Create a function def roman_to_int(roman_string): that converts a Roman numeral to an integer.
 
@@ -112,3 +112,10 @@ The main file are used for test the finctions, is a copy from Holberton exercise
 
 ## Advanced: 
 
+13. [Weighted average!](./100-weight.py)
+
+
+14. Squared by using map
+
+
+15. Delete by value
