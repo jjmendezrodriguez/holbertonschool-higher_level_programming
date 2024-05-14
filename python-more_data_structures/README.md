@@ -100,11 +100,11 @@ The main file are used for test the finctions, is a copy from Holberton exercise
 
  * Write a function that returns a key with the biggest integer value.
 
-11. [Multiply by using map]()
+11. [Multiply by using map](./11-multiply_list_map.py)
 
  * Write a function that returns a list with all values multiplied by a number without using any loops.
 
-12. Roman to Integer
+12. [Roman to Integer]()
 
  * Create a function def roman_to_int(roman_string): that converts a Roman numeral to an integer.
 
