@@ -96,11 +96,11 @@ The main file are used for test the finctions, is a copy from Holberton exercise
 
  * Write a function that returns a new dictionary with all values multiplied by 2
 
-10. [Best score]()
+10. [Best score](./10-best_score.py)
 
  * Write a function that returns a key with the biggest integer value.
 
-11. Multiply by using map
+11. [Multiply by using map]()
 
  * Write a function that returns a list with all values multiplied by a number without using any loops.
 
