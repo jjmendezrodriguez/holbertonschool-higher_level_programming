@@ -52,7 +52,7 @@ Learn more data structures and techniques for better programing and skills on py
 
 ## Main files:
 
-    The main file are used for test the finctions, is a copy from Holberton exercise. 
+The main file are used for test the finctions, is a copy from Holberton exercise. 
 
 ## Tasks:
 
@@ -76,15 +76,15 @@ Learn more data structures and techniques for better programing and skills on py
 
  * Write a function that returns a set of all elements present in only one set.
 
-5. [Number of keys]()
+5. [Number of keys](./5-number_keys.py)
 
  * Write a function that returns the number of keys in a dictionary.
 
-6. Print sorted dictionary
+6. [Print sorted dictionary](./6-print_sorted_dictionary.py)
 
  * Write a function that prints a dictionary by ordered keys.
 
-7. Update dictionary
+7. [Update dictionary]
 
  * Write a function that replaces or adds key/value in a dictionary.
 
