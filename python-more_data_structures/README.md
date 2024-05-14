@@ -52,7 +52,7 @@ Learn more data structures and techniques for better programing and skills on py
 
 ## Tasks:
 
-0. [Squared simple]()
+0. [Squared simple](./0-square_matrix_simple.py)
 
  * Write a function that computes the square value of all integers of a matrix.
 
