@@ -4,11 +4,11 @@ Learn mores data estructures and tecnics for better programing and skills on pyt
 
 ## Concepts from the text on lambda, map, filter, and reduce functions in Python:
 
-    ### Lambda Functions
+### Lambda Functions
 
-    * Lambda functions are small anonymous functions defined using the lambda keyword.
+   * Lambda functions are small anonymous functions defined using the lambda keyword.
 
-    * Syntax: lambda arguments: expression which allows you to implement simple functions in a single line without formally defining a function using def.
+   * Syntax: lambda arguments: expression which allows you to implement simple functions in a single line without formally defining a function using def.
         
         These are especially useful for short, throwaway functions that are not intended to be used repeatedly.
 
