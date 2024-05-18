@@ -98,5 +98,9 @@ python
 
 ## Advanced:
 
+7. [Singly linked list](./100-singly_linked_list.py)
 
+ * Write a class `Node` that defines a node of a singly linked list And, write a class SinglyLinkedList that defines a singly linked list
+
+8. [Print Square instance]
 
