@@ -14,7 +14,19 @@ class Square:
             position (tuple, optional): The position of the square.
             Defaults to (0, 0)."""
 
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
         self.size = size  # This uses the size setter
+        if (isinstance(position, tuple)):
+            if all(isinstance(num, int) for num in position) and (
+                 all(num >= 0 for num in position)) and len(position) == 2:
+                self.__position = position 
+            else:
+                raise TypeError(
+                    "position must be a tuple of 2 positive integers")
+
         self.__position = position  # This uses the position setter
 
     @property
