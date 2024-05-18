@@ -92,5 +92,11 @@ python
 
  * Write a class Square that defines a square by: (based on `4-square.py`)
 
-6. [Coordinates of a square]()
+6. [Coordinates of a square](./6-square.py)
+
+ * Write a class Square that defines a square by: (based on `5-square.py`)
+
+## Advanced:
+
+
 
