@@ -18,7 +18,7 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        self.size = size  # This uses the size setter
+        self.__size = size  # This uses the size setter
         if (isinstance(position, tuple)):
             if all(isinstance(num, int) for num in position) and (
                  all(num >= 0 for num in position)) and len(position) == 2:
