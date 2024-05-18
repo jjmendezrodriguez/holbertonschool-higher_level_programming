@@ -62,6 +62,9 @@ python
         user = User("John Doe")
         print(user.name)  # Access like a regular attribute
         user.name = "Jane Doe"
+## Mains Files:
+
+ The main file are used for test the finctions, is a copy from Holberton exercise.
 
 ## Task:
 
@@ -77,4 +80,8 @@ python
 
  * Write a class Square that defines a square by: (based on 1-square.py)
 
-3. [Area of a square]()
+3. [Area of a square](./3-square.py)
+
+ * Write a class Square that defines a square by: (based on `2-square.py`)
+
+4. [Access and update private attribute]()
