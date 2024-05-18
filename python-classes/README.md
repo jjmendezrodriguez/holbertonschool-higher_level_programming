@@ -73,5 +73,8 @@ python
 
  * Write a class Square that defines a square by: (based on `0-square.py`)
 
- 
+2. [Size validation](./2-square.py)
 
+ * Write a class Square that defines a square by: (based on 1-square.py)
+
+3. [Area of a square]()
