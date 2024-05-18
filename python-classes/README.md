@@ -65,5 +65,13 @@ python
 
 ## Task:
 
-0. My first square
+0. [My first square](./0-square.py)
+
+ * Write a class Square that defines a square by: (based on `0-square.py`)
+
+1. [Square with size](./1-square.py)
+
+ * Write a class Square that defines a square by: (based on `0-square.py`)
+
+ 
 
