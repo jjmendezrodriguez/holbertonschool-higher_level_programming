@@ -72,10 +72,14 @@ class Square:
     def my_print(self):
         """Print the square with the character '#' using
         the position attribute."""
-        if self.__size == 0:
-            print("")  # Print an empty line if size is 0
+        if self.size > 0:
+            for _ in range(self.position[1]):
+                print("")  # Print an empty line if size is 0
+            for count, _ in enumerate(range(self.size)):
+                for _ in range(self.position[0]):
+                    print(" ", end="")
+                for _ in range(self.__size):
+                    print("#", end="")
+                print()
         else:
-            print("\n" * self.__position[1], end="")  # Handle vertical offset
-            for _ in range(self.__size):
-                print(" " * self.__position[0] + "#" * self.__size)
-                # Print each line with horizontal offset
+            print()
