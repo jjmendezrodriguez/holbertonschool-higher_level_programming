@@ -102,5 +102,11 @@ python
 
  * Write a class `Node` that defines a node of a singly linked list And, write a class SinglyLinkedList that defines a singly linked list
 
-8. [Print Square instance]
+8. [Print Square instance](./101-square.py)
+
+ * Write a class Square that defines a square by: (based on `6-square.py`)
+
+9. [Compare 2 squares](./102-square.py)
+
+ * Write a class Square that defines a square by: (based on `4-square.py`)
 
