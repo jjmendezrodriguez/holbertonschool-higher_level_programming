@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+""" 
+This module define
+    Prototype:
+        def matrix_divided(matrix, div):
+"""
+
+
 def matrix_divided(matrix, div):
     """
     Divides all elements of a matrix by a divisor and returns a
