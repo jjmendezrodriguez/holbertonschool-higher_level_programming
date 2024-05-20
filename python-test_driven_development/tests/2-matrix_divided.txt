@@ -31,3 +31,17 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 Traceback (most recent call last):
     ...
 TypeError: div must be a number
+
+# Test with NaN in the matrix
+>>> matrix_divided([[float('nan'), 2], [3, 4]], 2)
+[[nan, 1.0], [1.5, 2.0]]
+
+# Test with infinity in the matrix
+>>> matrix_divided([[float('inf'), 2], [3, 4]], 2)
+[[inf, 1.0], [1.5, 2.0]]
+
+# Test with mixed types in the matrix (int, float, string, list)
+>>> matrix_divided([1, 2.5, 'three', [4]], 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
