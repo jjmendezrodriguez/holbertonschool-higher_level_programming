@@ -60,3 +60,6 @@ Unittest is another Python module that is used for writing and running tests. It
 
 0. [Integers addition](./0-add_integer.py)
        
+ * Write a function that adds 2 integers.
+
+1. [Divide a matrix]()

@@ -1,0 +1,33 @@
+>>> from your_script_name import matrix_divided
+
+# Test with valid integers and a valid divisor
+>>> matrix_divided([[1, 2], [3, 4]], 2)
+[[0.5, 1.0], [1.5, 2.0]]
+
+# Test with valid floats and a valid divisor
+>>> matrix_divided([[1.5, 2.5], [3.5, 4.5]], 1.5)
+[[1.0, 1.67], [2.33, 3.0]]
+
+# Test where divisor is zero should raise an error
+>>> matrix_divided([[1, 2], [3, 4]], 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
+
+# Test with non-uniform row sizes should raise an error
+>>> matrix_divided([[1, 2], [3, 4, 5]], 2)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
+
+# Test with non-numeric types in matrix should raise an error
+>>> matrix_divided([[1, 2], ['three', 4]], 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Test with non-numeric divisor should raise an error
+>>> matrix_divided([[1, 2], [3, 4]], 'five')
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
