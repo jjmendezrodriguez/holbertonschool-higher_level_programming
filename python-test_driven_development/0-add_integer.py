@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+This module has a func that adds two int
+    Prototype:
+        def add_integer(a, b=98)
+"""
+
 def add_integer(a, b=98):
     """
     Adds two integers or floats after converting them to integers.
