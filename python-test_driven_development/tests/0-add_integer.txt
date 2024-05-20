@@ -1,0 +1,28 @@
+>>> from your_module_name import add_integer
+
+# Test with integers
+>>> add_integer(10, 20)
+30
+
+# Test with floats that need to be converted
+>>> add_integer(10.5, 2.5)
+12
+
+# Test with default parameter value
+>>> add_integer(100)
+198
+
+# Test with a float and an int
+>>> add_integer(50.1, 50)
+100
+
+# Test raising TypeError for invalid inputs
+>>> add_integer("100", 100)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+>>> add_integer(100, "abc")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
