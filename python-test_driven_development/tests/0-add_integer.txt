@@ -39,3 +39,9 @@ TypeError: b must be an integer
 # Test with very large integers
 >>> add_integer(1000000, 2000000)
 3000000
+
+# Test Overflow cannot convert float infinity
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
