@@ -41,7 +41,19 @@ TypeError: div must be a number
 [[inf, 1.0], [1.5, 2.0]]
 
 # Test with mixed types in the matrix (int, float, string, list)
->>> matrix_divided([1, 2.5, 'three', [4]], 2)
+>>> matrix_divided([[1, 2.5, 'three', [4]]], 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Test with None as a divisor
+>>> matrix_divided([[1, 2], [3, 4]], None)
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
+
+# Test with None in the matrix
+>>> matrix_divided([[1, None], [3, 4]], 2)
 Traceback (most recent call last):
     ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats

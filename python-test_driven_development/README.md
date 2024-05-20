@@ -56,10 +56,33 @@ Unittest is another Python module that is used for writing and running tests. It
 
  * Use Continuous Integration (CI): Implement continuous integration to automate tests each time changes are pushed to your version control system.
 
+## Tests files:
+    
+    This files are for 
+
+## Mains Files:
+
+ The main file are used for test the finctions, is a copy from Holberton exercise.
+
  ## Tasks:
 
 0. [Integers addition](./0-add_integer.py)
        
  * Write a function that adds 2 integers.
 
-1. [Divide a matrix]()
+1. [Divide a matrix](./2-matrix_divided.py)
+
+ * Write a function that divides all elements of a matrix.
+
+2. [Say my name](./3-say_my_name.py)
+
+ * Write a function that prints `My name is <first name> <last name>`
+
+3. [Print square](./3-say_my_name.py)
+
+ * Write a function that prints a square with the character `#`.
+
+4. [Text indentation](./4-print_square.py)
+
+ * Write a function that prints a text with 2 new lines after each of these characters:` ., ? and :`
+
