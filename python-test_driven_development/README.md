@@ -55,4 +55,8 @@ Unittest is another Python module that is used for writing and running tests. It
  * Run Tests Frequently: Run your tests frequently to catch regressions or errors as early as possible.
 
  * Use Continuous Integration (CI): Implement continuous integration to automate tests each time changes are pushed to your version control system.
+
+ ## Tasks:
+
+0. [Integers addition](./0-add_integer.py)
        
