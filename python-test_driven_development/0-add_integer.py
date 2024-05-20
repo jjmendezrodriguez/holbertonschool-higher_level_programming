@@ -7,7 +7,7 @@ def add_integer(a, b=98):
     a (int, float): The first number to add. Must be an integer or float,
      otherwise a TypeError is raised.
     b (int, float, optional): The second number to add. Defaults to 98.
-    Must be an integer or float, otherwise a TypeError is raised.
+     Must be an integer or float, otherwise a TypeError is raised.
 
     Returns:
     int: The sum of a and b after both have been converted to integers.
@@ -21,6 +21,3 @@ def add_integer(a, b=98):
         raise TypeError("b must be an integer")
 
     return int(a) + int(b)
-
-# Example use case (uncomment to run)
-# print(add_integer(10.5, 3.2))  # Expected output: 13
