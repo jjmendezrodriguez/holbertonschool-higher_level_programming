@@ -1,4 +1,4 @@
->>> from your_module_name import add_integer
+>>> from add_integer import add_integer
 
 # Test with integers
 >>> add_integer(10, 20)
