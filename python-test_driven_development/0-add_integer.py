@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """
-This module has a func that adds two int
+This module define
     Prototype:
         def add_integer(a, b=98)
 """
+
 
 def add_integer(a, b=98):
     """
