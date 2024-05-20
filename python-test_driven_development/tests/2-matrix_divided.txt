@@ -32,28 +32,30 @@ Traceback (most recent call last):
     ...
 TypeError: div must be a number
 
-# Test with NaN in the matrix
->>> matrix_divided([[float('nan'), 2], [3, 4]], 2)
-[[nan, 1.0], [1.5, 2.0]]
-
-# Test with infinity in the matrix
->>> matrix_divided([[float('inf'), 2], [3, 4]], 2)
-[[inf, 1.0], [1.5, 2.0]]
-
-# Test with mixed types in the matrix (int, float, string, list)
->>> matrix_divided([[1, 2.5, 'three', [4]]], 2)
+# Test with None as an element in matrix should raise an error
+>>> matrix_divided([[1, None], [3, 4]], 2)
 Traceback (most recent call last):
     ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-# Test with None as a divisor
+# Test with None as divisor should raise an error
 >>> matrix_divided([[1, 2], [3, 4]], None)
 Traceback (most recent call last):
     ...
 TypeError: div must be a number
 
-# Test with None in the matrix
->>> matrix_divided([[1, None], [3, 4]], 2)
+# Test with very large numbers
+>>> matrix_divided([[1000000000, 2000000000], [3000000000, 4000000000]], 1000000000)
+[[1.0, 2.0], [3.0, 4.0]]
+
+# Test with infinity as an element should raise an error
+>>> matrix_divided([[float('inf'), 2], [3, 4]], 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Test with NaN as an element should raise an error
+>>> matrix_divided([[float('nan'), 2], [3, 4]], 2)
 Traceback (most recent call last):
     ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats

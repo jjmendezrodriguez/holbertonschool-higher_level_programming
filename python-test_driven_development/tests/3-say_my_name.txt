@@ -1,19 +1,19 @@
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
-# Test with valid first name and last name
+# Test with valid first and last name
 >>> say_my_name("John", "Doe")
 My name is John Doe
 
-# Test with only a first name
+# Test with valid first name only
 >>> say_my_name("John")
 My name is John
 
-# Test with first name and empty last name
->>> say_my_name("John", "")
-My name is John
+# Test with spaces around names
+>>> say_my_name(" John ", " Doe ")
+My name is John Doe
 
-# Test with spaces in names
->>> say_my_name(" John", "Doe ")
+# Test with one name having multiple spaces
+>>> say_my_name("John", "  Doe ")
 My name is John Doe
 
 # Type error with non-string first name
@@ -23,13 +23,37 @@ Traceback (most recent call last):
 TypeError: first_name must be a string
 
 # Type error with non-string last name
->>> say_my_name("John", 123)
+>>> say_my_name("John", 456)
 Traceback (most recent call last):
     ...
 TypeError: last_name must be a string
 
-# Type error with non-string first name and non-string last name
->>> say_my_name(123, 456)
+# Test with None as input
+>>> say_my_name(None)
 Traceback (most recent call last):
     ...
-TypeError: first_name must be a string or last_name must be a string
+TypeError: first_name must be a string
+
+# Test with float input
+>>> say_my_name(123.456)
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+# Test with complex type
+>>> say_my_name(complex(1, 2))
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+# Test with dict type
+>>> say_my_name({"first": "John"})
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+# Test with empty string
+>>> say_my_name("")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string

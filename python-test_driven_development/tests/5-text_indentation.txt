@@ -1,1 +1,74 @@
-q
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Test with a sentence containing all punctuation marks
+>>> text_indentation("Hello? Are you there! Yes, I am here: waiting.")
+Hello?
+<BLANKLINE>
+Are you there!
+<BLANKLINE>
+Yes, I am here:
+<BLANKLINE>
+waiting.
+<BLANKLINE>
+
+# Test with a sentence containing no special punctuation
+>>> text_indentation("This is a normal sentence without special characters.")
+This is a normal sentence without special characters.
+<BLANKLINE>
+
+# Test with multiple spaces after punctuation
+>>> text_indentation("Hello?   Are you there!   Yes, I am here:   waiting.")
+Hello?
+<BLANKLINE>
+Are you there!
+<BLANKLINE>
+Yes, I am here:
+<BLANKLINE>
+waiting.
+<BLANKLINE>
+
+# Test with only punctuation
+>>> text_indentation("?:!")
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+!
+<BLANKLINE>
+
+# Test with empty string
+>>> text_indentation("")
+<BLANKLINE>
+
+# Test with None input should raise an error
+>>> text_indentation(None)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+# Test with numeric input should raise an error
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+# Test with mixed types in input should raise an error
+>>> text_indentation("Hello!123")
+Hello!
+<BLANKLINE>
+123
+<BLANKLINE>
+
+# Test with long text
+>>> text_indentation("Long text follows here. Very long indeed? Yes, extremely long!")
+Long text follows here.
+<BLANKLINE>
+Very long indeed?
+<BLANKLINE>
+Yes, extremely long!
+<BLANKLINE>
+
+# Test with special characters and no punctuation
+>>> text_indentation("This is a test # @ $ % ^ & * () - + = with special characters but no punctuation.")
+This is a test # @ $ % ^ & * () - + = with special characters but no punctuation.
+<BLANKLINE>
