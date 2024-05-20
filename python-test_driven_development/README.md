@@ -1,0 +1,58 @@
+# Python - Test-driven development
+
+## Introduction
+
+This document provides an overview of test-driven development (TDD) practices within Python programming. It highlights the importance of using tests, particularly `doctest` and `unittest`, to ensure code reliability and functionality as per the documentation.
+
+## Test-Driven Development (TDD)
+
+Test-driven development is an iterative development process where requirements are turned into very specific test cases, then the software is improved to pass the new tests. This is opposed to software being developed first and test cases created later. Python supports TDD with various tools and libraries.
+
+## Tools for TDD in Python
+
+### Doctest
+
+The `doctest` module searches for pieces of text that look like interactive Python sessions inside docstrings and then executes those sessions to verify that they work exactly as shown.
+
+**Example of a simple doctest in a function:**
+
+        python
+        def add(a, b):
+            """
+            Adds two numbers and returns the result.
+
+            >>> add(2, 3)
+            5
+            """
+            return a + b
+
+        if __name__ == "__main__":
+            import doctest
+            doctest.testmod()
+
+### Unittest
+
+Unittest is another Python module that is used for writing and running tests. It is more comprehensive than doctest.
+
+**Example of a simple unittest:**
+
+        import unittest
+
+        class TestAddFunction(unittest.TestCase):
+            def test_add(self):
+                result = add(2, 3)
+                self.assertEqual(result, 5)
+
+        if __name__ == '__main__':
+            unittest.main()
+
+### Best Practices
+
+ * Document Your Tests: Alongside each function or method, write docstrings to explain what the function does, including examples that can be tested with `doctest`.
+ 
+ * Modular Code: Write code that is modular, making it easier to write tests for each component.
+
+ * Run Tests Frequently: Run your tests frequently to catch regressions or errors as early as possible.
+
+ * Use Continuous Integration (CI): Implement continuous integration to automate tests each time changes are pushed to your version control system.
+       
