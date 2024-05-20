@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 This module define
     Prototype:
         def matrix_divided(matrix, div):
