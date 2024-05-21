@@ -60,4 +60,6 @@ Here is a simple example to demonstrate a class with Python code:
 
  * Write an empty class Rectangle that defines a rectangle
 
-1. [Real definition of a rectangle]()
+1. [Real definition of a rectangle](./1-rectangle.py)
+
+ * Write a class Rectangle that defines a rectangle by: (based on `0-rectangle.py`)
