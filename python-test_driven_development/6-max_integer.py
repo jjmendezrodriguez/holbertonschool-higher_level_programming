@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""Module to find the max integer in a list
+"""
+
+
 def max_integer(list=[]):
     """Returns the maximum integer from a list of integers."""
     if not list:
