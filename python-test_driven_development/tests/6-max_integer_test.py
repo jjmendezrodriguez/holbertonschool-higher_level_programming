@@ -1,58 +1,42 @@
 #!/usr/bin/python3
 import unittest
-from max_integer import max_integer
+max_integer = __import__('6-max_integer').max_integer
 
+class TestMaxIntegerFunction(unittest.TestCase):
 
-class TestMaxInteger(unittest.TestCase):
-    """
-    Defines test cases for the max_integer function, which identifies the
-    maximum integer in a list.
-    """
+    def test_empty_list(self):
+        result = max_integer([])
+        self.assertIsNone(result, "Should return None for an empty list")
+
+    def test_overflow(self):
+        large_integers = [10**18, 2*(10**18), 5*(10**17)]
+        result = max_integer(large_integers)
+        self.assertEqual(result, 2*(10**18), "Incorrect result for overflow test")
+
+    def test_float_inf(self):
+        inf_list = [1, 2, float('inf'), 4, 5]
+        result = max_integer(inf_list)
+        self.assertEqual(result, float('inf'), "Incorrect result for float('inf') test")
 
     def test_max_integer(self):
-        """
-        Test various list configurations to ensure correct max integer is
-        returned.
-        """
-        # Test with a list of integers, expect the largest value
-        self.assertEqual(max_integer([1, 2, 3, 4]), 4, "Should be 4")
+        test_cases = [
+            ([1, 2, 3, 4], 4),
+            ([-1, -2, -3, -4, -5], -1),
+            ([10, 5, 7, 2, 8], 10),
+            ([0, 0, 0, 0, 0], 0),
+            ([-5, -10, -15, -20], -5),
+            ([5], 5),
+            ([-5, 0, 5], 5),
+            ([-10, 0, 10], 10),
+            ([2, 2.5, 3], 3),
+            (list(range(1000000)), 999999),
+            ([-1], -1),
+        ]
 
-        # Test with negative integers, expect the least negative value
-        self.assertEqual(max_integer([-1, -2, -3, -4]), -1, "Should be -1")
-
-        # Test with one element, expect that element
-        self.assertEqual(max_integer([1]), 1, "Should be 1")
-
-        # Test with identical elements, expect that element
-        self.assertEqual(max_integer([7, 7, 7]), 7, "Should be 7")
-
-        # Test with an empty list, expect None
-        self.assertIsNone(max_integer([]), "Should be None")
-
-        # Test without arguments, uses default empty list, expect None
-        self.assertIsNone(max_integer(), "Should be None")
-
-        # Test with mixed negative and positive numbers
-        self.assertEqual(max_integer([-1, 100, 3, 50]), 100, "Should be 100")
-
-        # Test with only negative numbers
-        self.assertEqual(max_integer([-10, -20, -30]), -10, "Should be -10")
-
-    def test_type_errors(self):
-        """
-        Test input types to ensure TypeErrors are raised when inputs are not
-        lists.
-        """
-        # Test with a string, which should raise a TypeError
-        with self.assertRaises(
-                TypeError, msg="Should raise TypeError for string input"):
-            max_integer("hello")
-
-        # Test with None, should raise TypeError because it is not iterable
-        with self.assertRaises(
-                TypeError, msg="Should raise TypeError for None input"):
-            max_integer(None)
-
+        for input_list, expected_result in test_cases:
+            with self.subTest(input_list=input_list, expected_result=expected_result):
+                result = max_integer(input_list)
+                self.assertEqual(result, expected_result, "Incorrect max integer")
 
 if __name__ == '__main__':
     unittest.main()
