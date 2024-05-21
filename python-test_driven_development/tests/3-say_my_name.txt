@@ -68,4 +68,4 @@ My name is  Walter
 
 # Test with two empty parameters
 >>> say_my_name("","")
-My name is
+My name is 
