@@ -69,3 +69,12 @@ My name is  Walter
 # Test with two empty parameters
 >>> say_my_name("","")
 My name is 
+
+#Test arg1 empty string
+>>> say_my_name("", "Holberton")
+My name is  Holberton
+
+# Test arg2 None
+>>> say_my_name("Jose", None)
+Traceback (most recent call last):
+TypeError: last_name must be a string
