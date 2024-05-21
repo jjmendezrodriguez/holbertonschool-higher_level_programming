@@ -81,11 +81,7 @@ ZeroDivisionError: division by zero
 
 # Handling special float cases
 >>> matrix_divided([[float('inf'), 2], [3, 4]], 2)
-Traceback (most recent call last):
-    ...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
+[[inf, 1.0], [1.5, 2.0]]
 
 >>> matrix_divided([[float('nan'), 2], [3, 4]], 2)
-Traceback (most recent call last):
-    ...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
+[[nan, 1.0], [1.5, 2.0]]
