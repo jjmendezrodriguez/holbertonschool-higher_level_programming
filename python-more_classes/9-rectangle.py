@@ -5,14 +5,12 @@
 class Rectangle:
     """Class that defines a rectangle."""
 
-    # Public class attributes
     number_of_instances = 0
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
-        self.height = height  # Set height before width
+        self.height = height
         self.width = width
-        # Increment the count of instances
         Rectangle.number_of_instances += 1
 
     @property
