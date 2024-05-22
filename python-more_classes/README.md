@@ -78,4 +78,11 @@ Here is a simple example to demonstrate a class with Python code:
 
 5. [Detect instance deletion](./5-rectangle.py)
 
- * 
+ * Write a class Rectangle that defines a rectangle by: (based on `4-rectangle.py`)
+
+6. [How many instances](./6-rectangle.py)
+
+ * Write a class Rectangle that defines a rectangle by: (based on `5-rectangle.py`)
+
+7
+
