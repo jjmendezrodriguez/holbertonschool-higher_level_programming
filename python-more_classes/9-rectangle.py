@@ -1,26 +1,37 @@
 #!/usr/bin/python3
-"""Module to define a Rectangle class."""
+"""
+This module defines a class Rectangle.
+Changing this onw so intranet corects me right.
+
+"""
 
 
 class Rectangle:
-    """Class that defines a rectangle."""
+    """
+    A class that defines a rectangle by its width and height.
+
+    Attributes:
+        number_of_instances (int): The number of Rectangle instances.
+        print_symbol (any): The symbol used for string representation.
+    """
 
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        self.height = height
+        """Initialize a new Rectangle instance."""
         self.width = width
+        self.height = height
         Rectangle.number_of_instances += 1
 
     @property
     def height(self):
-        """Retrieve the height of the rectangle."""
+        """Get the height of the rectangle."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Set the height of the rectangle, with checks for type and value."""
+        """Set the height of the rectangle."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -29,12 +40,12 @@ class Rectangle:
 
     @property
     def width(self):
-        """Retrieve the width of the rectangle."""
+        """Get the width of the rectangle."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Set the width of the rectangle, with checks for type and value."""
+        """Set the width of the rectangle."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -42,47 +53,42 @@ class Rectangle:
         self.__width = value
 
     def area(self):
-        """Calculate and return the area of the rectangle."""
+        """Return the area of the rectangle."""
         return self.__width * self.__height
 
     def perimeter(self):
-        """Calculate and return the perimeter of the rectangle.
-        Returns 0 if either the width or the height is 0."""
+        """Return the perimeter of the rectangle."""
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Return the string representation of the rectangle using the
-         character(s) stored in print_symbol."""
+        """Return a string representation of the rectangle."""
         if self.__width == 0 or self.__height == 0:
             return ""
-
-        rectangle_str = []
+        rectangle_rows = []
         for _ in range(self.height):
-            rectangle_str.append(str(self.print_symbol) * self.width)
-        return "\n".join(rectangle_str)
+            row = str(self.print_symbol) * self.width
+            rectangle_rows.append(row)
+
+        return "\n".join(rectangle_rows)
 
     def __repr__(self):
-        """Return a string representation of the rectangle to
-         recreate a new instance."""
+        """Return a string representation of the rectangle"""
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
-        """Print a message when an instance of Rectangle is deleted
-         and decrement the instance count."""
+        """Print a message when an instance of Rectangle is deleted."""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """Return the bigger rectangle based on the area or rect_1 if both have
-         the same area."""
+        """Return the biggest rectangle based on the area."""
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-
         if rect_1.area() >= rect_2.area():
             return rect_1
         return rect_2
