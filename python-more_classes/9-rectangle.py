@@ -73,9 +73,9 @@ class Rectangle:
     def __del__(self):
         """Print a message when an instance of Rectangle is deleted
          and decrement the instance count."""
-        print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-
+        print("Bye rectangle...")
+        
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """Return the bigger rectangle based on the area or rect_1 if both have
@@ -91,5 +91,4 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """Return a new Rectangle instance with width == height == size."""
-        return cls(size, size)
+                return cls(size, size)
