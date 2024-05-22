@@ -63,3 +63,13 @@ Here is a simple example to demonstrate a class with Python code:
 1. [Real definition of a rectangle](./1-rectangle.py)
 
  * Write a class Rectangle that defines a rectangle by: (based on `0-rectangle.py`)
+
+2. [Area and Perimeter](./2-rectangle.py)
+
+ * Write a class Rectangle that defines a rectangle by: (based on `1-rectangle.py`)
+
+3. [String representation](./3-rectangle.py)
+
+ * Write a class Rectangle that defines a rectangle by: (based on `2-rectangle.py`)
+
+4
