@@ -72,4 +72,10 @@ Here is a simple example to demonstrate a class with Python code:
 
  * Write a class Rectangle that defines a rectangle by: (based on `2-rectangle.py`)
 
-4
+4. [Eval is magic](./4-rectangle.py)
+
+ * Write a class Rectangle that defines a rectangle by: (based on `3-rectangle.py`)
+
+5. [Detect instance deletion](./5-rectangle.py)
+
+ * 
