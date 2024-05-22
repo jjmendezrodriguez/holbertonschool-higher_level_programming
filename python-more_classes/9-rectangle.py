@@ -80,19 +80,14 @@ class Rectangle:
     def bigger_or_equal(rect_1, rect_2):
         """Return the bigger rectangle based on the area or rect_1 if both have
          the same area."""
-        msg = "must be an instance of Rectangle"
-
-        if not isinstance(
-                rect_1, Rectangle) or not isinstance(rect_2, Rectangle):
-            if not isinstance(rect_1, Rectangle):
-                raise TypeError(f'rect_1 {msg}')
-            if not isinstance(rect_2, Rectangle):
-                raise TypeError(f'rect_2 {msg}')
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
 
         if rect_1.area() >= rect_2.area():
             return rect_1
-        else:
-            return rect_2
+        return rect_2
 
     @classmethod
     def square(cls, size=0):
