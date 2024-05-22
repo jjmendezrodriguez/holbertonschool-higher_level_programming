@@ -92,3 +92,11 @@ Here is a simple example to demonstrate a class with Python code:
 
  * Write a class Rectangle that defines a rectangle by: (based on `7-rectangle.py`)
 
+9. [A square is a rectangle](./9-rectangle.py)
+
+ * Write a class Rectangle that defines a rectangle by: (based on `8-rectangle.py`)
+
+## Advanceds:
+
+100
+
