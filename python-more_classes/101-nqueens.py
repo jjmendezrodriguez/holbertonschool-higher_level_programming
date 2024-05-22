@@ -34,6 +34,7 @@ def solve_nqueens(board, col, solutions):
 
 
 def print_solutions(solutions):
+    solutions.sort()
     for solution in solutions:
         print(solution)
 
