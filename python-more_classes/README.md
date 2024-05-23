@@ -98,5 +98,8 @@ Here is a simple example to demonstrate a class with Python code:
 
 ## Advanceds:
 
-100
+10. Class and instance attributes
 
+ * Write a blog post describing how object and class attributes work.
+
+11. [N queens](./101
