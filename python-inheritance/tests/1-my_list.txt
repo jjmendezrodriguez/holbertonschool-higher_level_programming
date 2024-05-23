@@ -42,3 +42,10 @@ Traceback (most recent call last):
   File "...", line 10, in print_sorted
     sorted_list = sorted(self)
 TypeError: '<' not supported between instances of 'str' and 'int'
+
+# Test append()
+>>> my_list = MyList([1, "Betty", "Holberton", 5])
+>>> my_list.append()
+Traceback (most recent call last):
+  ...
+TypeError: list.append() takes exactly one argument (0 given)
