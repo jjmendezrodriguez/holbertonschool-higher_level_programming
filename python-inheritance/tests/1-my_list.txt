@@ -1,4 +1,5 @@
-# Test cases for MyList class functionality
+# 1-my_list.txt
+# Jose Mendez <9047@holbertonstudents.com>
 
 >>> MyList = __import__('1-my_list').MyList
 >>> my_list = MyList()
