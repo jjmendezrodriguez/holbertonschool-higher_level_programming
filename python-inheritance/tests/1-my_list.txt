@@ -4,16 +4,6 @@
 This module defines the class `MyList` that inherits from `list` and adds a new method to print the list sorted.
 """
 
-def MyList:
-    """
-    A MyList object that extends the list with the ability to print sorted elements without modifying the original list.
-    """
-
-def print_sorted(self):
-    """
-    Prints the elements of the MyList instance in ascending order without altering the original list.
-    """
-
 # Test cases for MyList class functionality
 
 >>> MyList = __import__('1-my_list').MyList
