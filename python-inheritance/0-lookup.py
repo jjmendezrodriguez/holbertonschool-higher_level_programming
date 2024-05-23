@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""This module define the function lookup attribute list.
+
+ Prototype:
+    def lookup:
+"""
+
+
 def lookup(obj):
     """
     Returns the list of available attributes and methods of an object.
