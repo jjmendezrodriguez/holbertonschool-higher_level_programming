@@ -77,4 +77,28 @@ My name is  Holberton
 # Test arg2 None
 >>> say_my_name("Jose", None)
 Traceback (most recent call last):
+    ...
 TypeError: last_name must be a string
+
+# Additional test cases from initial description
+
+>>> say_my_name("Julian", "Mendez")
+My name is Julian Mendez
+
+>>> say_my_name("Cornelius Mendez", "Jose J")
+My name is Cornelius Mendez Jose J
+
+>>> say_my_name(1, "John")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name("Mendez", ["Jose", "Prueba", "Test"])
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+>>> say_my_name({"Mendez": 2, "Jose": 10}, 7.7)
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
