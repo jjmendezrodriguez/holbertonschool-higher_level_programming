@@ -1,3 +1,86 @@
-# tests/test_lookup.txt
+>>> lookup = __import__('lookup').lookup
+
+# Test the lookup function
 >>> lookup(5)
 ['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__gt__', '__hash__', '__index__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__']
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+# Test with valid first and last name
+>>> say_my_name("John", "Doe")
+My name is John Doe
+
+# Test with valid first name only
+>>> say_my_name("John")
+My name is John
+
+# Test with spaces around names
+>>> say_my_name(" John ", " Doe ")
+My name is John Doe
+
+# Test with one name having multiple spaces
+>>> say_my_name("John", "  Doe ")
+My name is John Doe
+
+# Type error with non-string first name
+>>> say_my_name(123, "Doe")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+# Type error with non-string last name
+>>> say_my_name("John", 456)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+# Test with None as input
+>>> say_my_name(None)
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+# Test with float input
+>>> say_my_name(123.456)
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+# Test with complex type
+>>> say_my_name(complex(1, 2))
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+# Test with dict type
+>>> say_my_name({"first": "John"})
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+# Test with empty string
+>>> say_my_name("")
+My name is 
+
+# Test Function without parameters
+>>> say_my_name()
+Traceback (most recent call last):
+    ...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+# Test for new line
+>>> say_my_name("\n\n", "Walter")
+My name is  Walter
+
+# Test with two empty parameters
+>>> say_my_name("","")
+My name is 
+
+#Test arg1 empty string
+>>> say_my_name("", "Holberton")
+My name is  Holberton
+
+# Test arg2 None
+>>> say_my_name("Jose", None)
+Traceback (most recent call last):
+TypeError: last_name must be a string
