@@ -54,7 +54,6 @@ TypeError: size must be an integer
 ##########
 ##########
 ##########
-<BLANKLINE>
 
 # Test with complex input should raise an error
 >>> print_square(complex(5))
