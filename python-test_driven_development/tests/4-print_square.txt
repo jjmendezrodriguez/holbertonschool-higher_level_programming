@@ -4,16 +4,13 @@
 >>> print_square(2)
 ##
 ##
-<BLANKLINE>
 
 # Test with size of 1
 >>> print_square(1)
 #
-<BLANKLINE>
 
 # Test with size of 0 (should print nothing)
 >>> print_square(0)
-<BLANKLINE>
 
 # Test with negative size should raise an error
 >>> print_square(-1)
