@@ -34,10 +34,6 @@ Traceback (most recent call last):
     ...
 TypeError: first_name must be a string
 
-# Test print_sorted() with empty list
->>> my_list = MyList([])
->>> my_list.print_sorted()
-[]
 # Test with float input
 >>> say_my_name(123.456)
 Traceback (most recent call last):
@@ -107,7 +103,3 @@ Traceback (most recent call last):
     ...
 TypeError: first_name must be a string
 
-# Test print_sorted() with empty list
->>> my_list = MyList([])
->>> my_list.print_sorted()
-[]
