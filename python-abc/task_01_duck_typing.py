@@ -38,8 +38,6 @@ class Circle(Shape):
         """
         Initialize a Circle with a specific radius.
         """
-        if radius < 0:
-            raise TypeError("radius cann't be negative")
         self.radius = radius
 
     def area(self):
@@ -67,11 +65,7 @@ class Rectangle(Shape):
         """
         Initialize a Rectangle with a specific width and height.
         """
-        if width < 0:
-            raise TypeError("width cann't be negative")
         self.width = width
-        if height < 0:
-            raise TypeError("height cann't be negative")
         self.height = height
 
 
