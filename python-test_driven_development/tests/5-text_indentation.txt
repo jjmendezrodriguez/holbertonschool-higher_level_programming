@@ -63,3 +63,9 @@ Yes, extremely long!
 >>> text_indentation("This is a test # @ $ % ^ & * () - + = with special characters but no punctuation.")
 This is a test # @ $ % ^ & * () - + = with special characters but no punctuation.
 <BLANKLINE>
+
+# Test text_indentation
+>>> text_indentation()
+Traceback (most recent call last):
+    ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
