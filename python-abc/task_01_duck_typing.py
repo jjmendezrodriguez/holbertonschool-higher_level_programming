@@ -52,7 +52,7 @@ class Circle(Shape):
         Calculate the perimeter of the circle.
         """
         import math
-        return 2 * math.pi * self.radius
+        return 2 * math.pi * abs(self.radius)
 
 
 class Rectangle(Shape):
