@@ -38,6 +38,8 @@ class Circle(Shape):
         """
         Initialize a Circle with a specific radius.
         """
+        if radius < 0:
+            raise TypeError("radius cann't be negative")
         self.radius = radius
 
     def area(self):
