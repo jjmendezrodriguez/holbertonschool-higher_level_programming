@@ -68,6 +68,10 @@ Very long indeed?
 Yes, extremely long!
 <BLANKLINE>
 
+# Test print_sorted() with empty list
+>>> my_list = MyList([])
+>>> my_list.print_sorted()
+[]
 # Test with special characters and no punctuation
 >>> text_indentation("This is a test # @ $ % ^ & * () - + = with special characters but no punctuation.")
 This is a test # @ $ % ^ & * () - + = with special characters but no punctuation.
