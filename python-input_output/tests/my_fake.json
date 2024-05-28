@@ -1,0 +1,10 @@
+>>> load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+
+my_list = [1, 2, 3]
+load_from_json_file(my_list, 'list_file.json')
+
+my_dict = {"name": "John", "places": ["San Francisco", "Tokyo"], "id": 12, "info": {"average": 3.14, "age": 36}, "is_active": true}
+load_from_json_file(my_dict, 'dict_file.json')
+
+my_fake = {"is_active": true, 12 }
+load_from_json_file(my_fake, 'fake_file.json')
