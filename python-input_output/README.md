@@ -108,8 +108,10 @@ This README provides an overview of various Python programming concepts covered,
 
  * Write a class Student that defines a student by: (based on `9-student.py`)
 
-11. [Student to disk and reload]()
+11. [Student to disk and reload](./11-student.py)
 
  * Write a class Student that defines a student by: (based on `10-student.py`)
 
-12. [Pascal's Triangle]()
+12. [Pascal's Triangle](./12-pascal_triangle.py)
+
+ * Create a function `def pascal_triangle(n)`: that returns a list of lists of integers representing the Pascal’s triangle of n.
