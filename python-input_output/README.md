@@ -76,4 +76,12 @@ This README provides an overview of various Python programming concepts covered,
 
  * Write a function that appends a string at the end of a text file (`UTF8`) and returns the number of characters added.
 
-3. [To JSON string]()
+3. [To JSON string](./3-to_json_string.py)
+
+ * Write a function that returns the JSON representation of an object (string).
+
+4. [From JSON string to Object](./4-from_json_string.py)
+
+ * Write a function that returns an object (Python data structure) represented by a JSON string.
+
+5. [Save Object to a file]()
