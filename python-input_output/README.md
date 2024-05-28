@@ -104,4 +104,12 @@ This README provides an overview of various Python programming concepts covered,
 
  * Write a class Student that defines a student.
 
-10. [Student to JSON with filter]()
+10. [Student to JSON with filter](./10-student.py)
+
+ * Write a class Student that defines a student by: (based on `9-student.py`)
+
+11. [Student to disk and reload]()
+
+ * Write a class Student that defines a student by: (based on `10-student.py`)
+
+12. [Pascal's Triangle]()
