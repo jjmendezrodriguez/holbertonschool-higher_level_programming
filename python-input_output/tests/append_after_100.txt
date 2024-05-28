@@ -1,4 +1,4 @@
->>> 
+>>> append_after = __import__('100-append_after').append_after
 
 At School,
 Python is really important,
