@@ -92,4 +92,8 @@ This README provides an overview of various Python programming concepts covered,
 
  * Write a function that creates an Object from a “JSON file”
 
-7. [Load, add, save]()
+7. [Load, add, save](./7-add_item.py)
+
+ * Write a script that adds all arguments to a Python list, and then save them to a file.
+
+8. [Class to JSON]()
