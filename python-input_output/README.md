@@ -84,4 +84,8 @@ This README provides an overview of various Python programming concepts covered,
 
  * Write a function that returns an object (Python data structure) represented by a JSON string.
 
-5. [Save Object to a file]()
+5. [Save Object to a file](./5-save_to_json_file.py)
+
+ * Write a function that writes an Object to a text file, using a JSON representation.
+
+6. [Create object from a JSON file]()
