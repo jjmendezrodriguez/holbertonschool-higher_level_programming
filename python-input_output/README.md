@@ -72,4 +72,8 @@ This README provides an overview of various Python programming concepts covered,
 
  * Write a function that writes a string to a text file (`UTF8`) and returns the number of characters written.
 
-2. [Append to a file]()
+2. [Append to a file](./2-append_write.py)
+
+ * Write a function that appends a string at the end of a text file (`UTF8`) and returns the number of characters added.
+
+3. [To JSON string]()
