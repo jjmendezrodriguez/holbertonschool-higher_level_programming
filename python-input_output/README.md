@@ -64,4 +64,6 @@ This README provides an overview of various Python programming concepts covered,
 
  ## Tasks:
 
-0. [Read file]()
+0. [Read file](./0-read_file.py)
+
+ * 
