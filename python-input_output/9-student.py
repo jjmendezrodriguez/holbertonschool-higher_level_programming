@@ -24,7 +24,8 @@ class Student:
         Retrieves a dictionary representation of a Student instance.
 
         Returns:
-            dict: A dictionary containing all attributes of the Student instance.
+            dict: A dictionary containing all attributes of the
+            Student instance.
         """
         # This could also be done by directly returning self.__dict__,
         # but we explicitly list the attributes for clarity and control.
