@@ -66,4 +66,10 @@ This README provides an overview of various Python programming concepts covered,
 
 0. [Read file](./0-read_file.py)
 
- * 
+ * Write a function that reads a text file (`UTF8`) and prints it to stdout.
+
+1. [Write to a file](./1-write_file.py)
+
+ * Write a function that writes a string to a text file (`UTF8`) and returns the number of characters written.
+
+2. [Append to a file]()
