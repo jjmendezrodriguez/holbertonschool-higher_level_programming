@@ -36,7 +36,7 @@ def append_after(filename="", search_string="", new_string=""):
         # Check if the current line contains the search string
         if search_string in line:
             # If so, append the new string as a new line
-            new_lines.append(new_string + '\n')
+            new_lines.append(new_string)
 
     # Write the modified or new lines back to the file
     with open(filename, 'w') as file:
