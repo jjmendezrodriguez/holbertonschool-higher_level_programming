@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+This module provides a function 'append_after' that inserts a
+specific string into a file. It adds the string after each line
+that contains a specified search string. This functionality
+is useful for modifying files in a targeted way, such as adding
+comments or additional data where certain patterns or keywords exist.
+"""
 
 
 def append_after(filename="", search_string="", new_string=""):
