@@ -32,7 +32,7 @@ def load_and_deserialize(filename):
     dict: The deserialized dictionary from the JSON file.
     """
     try:
-        with open(filename, 'r') as file:
+        with open(filename, 'r', encoding="UTF8") as file:
             data = json.loads(file.read())
             return data
     except Exception as e:
