@@ -14,12 +14,10 @@ def serialize_and_save_to_file(data, filename):
     filename (str): The filename of the output JSON file.
     If the output file already exists, it should be replaced.
     """
-    try:
-        with open(filename, 'w') as file:
-            json.dump(data, file)
-    except Exception as e:
-        print(f"An error occurred while saving data to '{filename}': {e}")
 
+    with open(filename, 'w') as file:
+        json.dump(data, file)
+ 
 
 def load_and_deserialize(filename):
     """
@@ -31,10 +29,6 @@ def load_and_deserialize(filename):
     Returns:
     dict: The deserialized dictionary from the JSON file.
     """
-    try:
-        with open(filename, 'r', encoding="UTF8") as file:
-            data = json.loads(file.read())
-            return data
-    except Exception as e:
-        print(f"An error occurred while loading data from '{filename}': {e}")
-        return None
+    with open(filename, 'r') as file:
+        data = json.load(file)
+    return data
