@@ -51,12 +51,12 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
 
         else:
             # Send a 404 Not Found response for undefined endpoints
-            self.send_response(404)
+            self.send_response("404 Not Found")
             # Specify the content type as application/json
             self.send_header('Content-type', 'application/json')
             self.end_headers()
             # Create an error message
-            error_message = {"status": "404 Not Found", "message": "Endpoint not found"}
+            error_message = {"Endpoint not found"}
             # Write the JSON response body
             self.wfile.write(json.dumps(error_message).encode('utf-8'))
 
