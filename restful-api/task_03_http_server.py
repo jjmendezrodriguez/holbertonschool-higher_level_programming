@@ -56,6 +56,7 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             # Write response 404 Not Found
             self.wfile.write(b"404 Not Found")
 
+
 # Set the server address and port
 server_address = ('', 8000)
 httpd = http.server.HTTPServer(server_address, SimpleHTTPRequestHandler)
