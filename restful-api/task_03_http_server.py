@@ -49,11 +49,11 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
 
         else:
             # Send a 404 Not Found response for undefined endpoints
-            self.send_error(404)
+            self.send_response(404)
             # Specify the content type as application/json
             self.send_header('Content-type', 'application/json')
             self.end_headers()
-            # Write response OK
+            # Write response 404 Not Found
             self.wfile.write(b"404 Not Found")
 
 # Set the server address and port
