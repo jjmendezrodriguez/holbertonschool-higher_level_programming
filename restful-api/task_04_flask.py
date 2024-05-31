@@ -33,7 +33,7 @@ def get_user(username):
 # Add a route to handle POST requests to add a new user
 @app.route('/add_user', methods=['POST'])
 def add_user():
-    new_user = request.form.to_dict()
+    new_user = request.json
     username = new_user.get('username')
     if not username:
         return jsonify({"error": "Username is required"}), 400
