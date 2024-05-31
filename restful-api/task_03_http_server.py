@@ -2,7 +2,6 @@
 import http.server  # Import the http.server module for creating an HTTP server
 import json  # Import the json module for handling JSON data
 
-
 # Create a subclass of http.server.BaseHTTPRequestHandler to handle requests
 class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
@@ -15,7 +14,7 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             self.end_headers()
             # Write the response body
             self.wfile.write(b"Hello, this is a simple API!")
-
+        
         elif self.path == '/data':
             # Send a 200 OK response
             self.send_response(200)
@@ -38,6 +37,17 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             # Write the JSON response body
             self.wfile.write(json.dumps(status).encode('utf-8'))
 
+        elif self.path == '/info':
+            # Send a 200 OK response
+            self.send_response(200)
+            # Specify the content type as application/json
+            self.send_header('Content-type', 'application/json')
+            self.end_headers()
+            # Create an info JSON data
+            info = {"version": "1.0", "description": "A simple API built with http.server"}
+            # Write the JSON response body
+            self.wfile.write(json.dumps(info).encode('utf-8'))
+
         else:
             # Send a 404 Not Found response for undefined endpoints
             self.send_response(404)
@@ -48,7 +58,6 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             error_message = {"error": "Endpoint not found"}
             # Write the JSON response body
             self.wfile.write(json.dumps(error_message).encode('utf-8'))
-
 
 # Set the server address and port
 server_address = ('', 8000)
