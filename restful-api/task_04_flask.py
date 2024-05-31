@@ -26,9 +26,8 @@ def get_data():
 def get_status():
     return "OK"
 
-
 # Add a dynamic route to get user information by username
-@app.route('/users/<username>', methods=['GET'])
+@app.route('/users/<username>')
 def get_user(username):
     user = users.get(username)
     if user:
