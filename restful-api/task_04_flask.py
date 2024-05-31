@@ -45,7 +45,7 @@ def add_user():
         "age": new_user.get('age'),
         "city": new_user.get('city')
     }
-    return jsonify({"message": "User added", "user": users[username]})
+    return jsonify({"message": "User added", "user": username})
 
 # Run the Flask development server
 if __name__ == "__main__":
