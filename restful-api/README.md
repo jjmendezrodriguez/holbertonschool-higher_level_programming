@@ -221,4 +221,6 @@ print('Response Body:', response.json())
 
 1. [Consume data from an API using command line tools (curl)](./README.md)
 
-2. [Consuming and processing data from an API using Python]()
+2. [Consuming and processing data from an API using Python](./task_02_requests.py)
+
+3. [Develop a simple API using Python with the `http.server` module]()
