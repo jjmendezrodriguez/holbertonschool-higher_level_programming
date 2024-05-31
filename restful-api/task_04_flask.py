@@ -4,7 +4,9 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 # In-memory dictionary to store user data
-users = {}
+users = {
+    "jane": {"username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"}
+}
 
 # Define a route for the root URL ("/") and create a function to handle this route
 @app.route('/')
@@ -33,7 +35,7 @@ def get_user(username):
 # Add a route to handle POST requests to add a new user
 @app.route('/add_user', methods=['POST'])
 def add_user():
-    new_user = request.form.to_dict()
+    new_user = request.json
     username = new_user.get('username')
     if not username:
         return jsonify({"error": "Username is required"}), 400
@@ -45,8 +47,8 @@ def add_user():
         "age": new_user.get('age'),
         "city": new_user.get('city')
     }
-    return jsonify({"message": "User added", "user": users[username]}), 200
+    return jsonify({"message": "User added", "user": users[username]})
 
 # Run the Flask development server
 if __name__ == "__main__":
-    app.run(port=5000)
+    app.run(port="5000")
