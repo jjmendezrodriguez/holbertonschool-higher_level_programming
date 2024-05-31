@@ -1,8 +1,14 @@
-# Specify the base image
+# Especificar la imagen base
 FROM alpine
 
-# Install the curl package using the RUN directive
+# Instalar el paquete curl usando el gestor de paquetes apk de Alpine
 RUN apk add --no-cache curl
 
-# Copy the config.txt file to the /app directory in the container
+# Copiar el archivo config.txt al directorio /app en el contenedor
 COPY config.txt /app/config.txt
+
+# Especificar un volumen en /data
+VOLUME /data
+
+# Comando por defecto que se ejecutará al iniciar el contenedor
+CMD ["echo", "Hello, World!"]
