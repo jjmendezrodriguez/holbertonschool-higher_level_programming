@@ -16,13 +16,13 @@ def home():
 
 
 # Create a new route /data to return a list of all usernames stored in the API
-@app.route('/data', methods=['GET'])
+@app.route('/data')
 def get_data():
     return jsonify(list(users.keys()))
 
 
 # Add a route to return OK status
-@app.route('/status', methods=['GET'])
+@app.route('/status')
 def get_status():
     return "OK"
 
