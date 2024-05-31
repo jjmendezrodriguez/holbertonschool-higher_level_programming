@@ -91,7 +91,7 @@ At the end of this exercise, you should be able to:
 1. **Install `curl`**:
    - For Linux/Mac: Open the terminal and run:
      ```bash
-     sudo apt-get install curl  # For Debian-based systems
+     sudo apt -get install curl  # For Debian-based systems
      brew install curl          # For macOS using Homebrew
      ```
    - For Windows: Consider using Windows Subsystem for Linux (WSL) or download a Windows version of `curl` from [curl.se](https://curl.se/windows/).
