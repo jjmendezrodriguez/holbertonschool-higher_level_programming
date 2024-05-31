@@ -4,9 +4,7 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 # In-memory dictionary to store user data
-users = {
-    "jane": {"username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"}
-}
+users = {}
 
 # Define a route for the root URL ("/") and create a function to handle this route
 @app.route('/')
@@ -51,4 +49,4 @@ def add_user():
 
 # Run the Flask development server
 if __name__ == "__main__":
-    app.run(port="5000")
+    app.run(port=5000)
