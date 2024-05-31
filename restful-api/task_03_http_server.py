@@ -33,10 +33,8 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             # Specify the content type as application/json
             self.send_header('Content-type', 'application/json')
             self.end_headers()
-            # Create a status JSON data
-            status = {"status": "OK"}
-            # Write the JSON response body
-            self.wfile.write(json.dumps(status).encode('utf-8'))
+            # Write response OK
+            self.wfile.write(b"OK")
 
         elif self.path == '/info':
             # Send a 200 OK response
@@ -55,11 +53,8 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             # Specify the content type as application/json
             self.send_header('Content-type', 'application/json')
             self.end_headers()
-            # Create an error message
-            error_message = {"error": "Endpoint not found"}
-            # Write the JSON response body
-            self.wfile.write(json.dumps(error_message).encode('utf-8'))
-
+            # Write response OK
+            self.wfile.write(b"404 Not Found")
 
 # Set the server address and port
 server_address = ('', 8000)
