@@ -21,7 +21,7 @@ def get_data():
 # Add a route to return OK status
 @app.route('/status', methods=['GET'])
 def get_status():
-    return jsonify({"status": "OK"})
+    return "OK"
 
 # Add a dynamic route to get user information by username
 @app.route('/users/<username>', methods=['GET'])
@@ -37,17 +37,18 @@ def get_user(username):
 def add_user():
     new_user = request.json
     username = new_user.get('username')
-    if username and username not in users:
-        users[username] = {
-            "username": username,
-            "name": new_user.get('name'),
-            "age": new_user.get('age'),
-            "city": new_user.get('city')
-        }
-        return jsonify({"message": "User added", "user": users[username]})
-    else:
-        return jsonify({"error": "Invalid data or user already exists"}), 400
+    if not username:
+        return jsonify({"error": "Username is required"}), 400
+    if username in users:
+        return jsonify({"error": "User already exists"}), 400
+    users[username] = {
+        "username": username,
+        "name": new_user.get('name'),
+        "age": new_user.get('age'),
+        "city": new_user.get('city')
+    }
+    return jsonify({"message": "User added", "user": users[username]})
 
 # Run the Flask development server
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port="5000", debug=True)
+    app.run(port="5000")
