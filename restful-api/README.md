@@ -159,13 +159,66 @@ At the end of this exercise, you should be able to:
 **Python Code:**
 ```python code 
 
-    import requests
+    import requests  # Import the requests library for making HTTP requests
+    
+    # Make an HTTP GET request to the specified URL
+    response = requests.get('https://jsonplaceholder.typicode.com/posts/1')
 
-    # Fetching data from JSONPlaceholder
-    response = requests.get('https://jsonplaceholder.typicode.com/posts')
+    # Print the status code of the response (e.g., 200 for OK, 404 for Not Found)
     print('Status Code:', response.status_code)
-    print('Response Body:', response.json())
 
+    # Print the body of the response, parsed as JSON
+    print('Response Body:', response.json())
+   
 ```
 
 ### Example 2: Fetching Only Headers
+
+**Python Code:**
+```python code
+
+    import requests  # Import the requests library for making HTTP requests
+
+    # Make an HTTP HEAD request to the specified URL to fetch only the headers
+    response = requests.head('https://jsonplaceholder.typicode.com/posts')
+
+    # Print the status code of the response (e.g., 200 for OK, 404 for Not Found)
+    print('Status Code:', response.status_code)
+
+    # Print the headers of the response
+    print('Headers:', response.headers)
+
+```
+
+### Example 3: Making a POST Request
+
+**Python Code:**
+```python code
+
+import requests  # Import the requests library for making HTTP requests
+
+# Data to be sent in the POST request
+data = {
+    'title': 'foo',
+    'body': 'bar',
+    'userId': 1
+}
+
+# Make an HTTP POST request to the specified URL with the given data
+response = requests.post('https://jsonplaceholder.typicode.com/posts', json=data)
+
+# Print the status code of the response (e.g., 201 for Created)
+print('Status Code:', response.status_code)
+
+# Print the body of the response, parsed as JSON
+print('Response Body:', response.json())
+
+```
+
+## Tasks:
+
+0. [Basics of HTTP/HTTPS](./README.md)
+
+1. [Consume data from an API using command line tools (curl)](./README.md)
+
+2. [Consuming and processing data from an API using Python]()
