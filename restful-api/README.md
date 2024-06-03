@@ -223,4 +223,5 @@ print('Response Body:', response.json())
 
 2. [Consuming and processing data from an API using Python](./task_02_requests.py)
 
-3. [Develop a simple API using Python with the `http.server` module]()
+3. [Develop a simple API using Python with the `http.server` module](./task_03_http_server.py)
+

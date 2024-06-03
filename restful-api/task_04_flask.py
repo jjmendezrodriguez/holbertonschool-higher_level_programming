@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+from flask import abort
 from flask import Flask, jsonify, request
 
 # Instantiate a Flask web server from the Flask module
@@ -29,30 +30,41 @@ def get_status():
 # Add a dynamic route to get user information by username
 @app.route('/users/<username>')
 def get_user(username):
-    user = users.get(username)
-    if user:
-        return jsonify(user)
-    else:
-        return jsonify({"error": "User not found"}), 404
+    # specified
+        if username not in users:
+            return jsonify({"error": "User not found"}), 404
+        
+        outputs = users[username]
+        outputs["username"] = username
 
+        return jsonify(outputs)
 
 # Add a route to handle POST requests to add a new user
 @app.route('/add_user', methods=['POST'])
 def add_user():
-    new_user = request.json
-    username = new_user.get('username')
-    if not username:
+    if request.get_json() is None:
+        abort(400, "not a json")
+
+    req_data = request.get_json()
+    
+    if "username" not in req_data:
         return jsonify({"error": "Username is required"}), 400
-    if username in users:
-        return jsonify({"error": "User already exists"}), 400
-    users[username] = {
-        "username": username,
-        "name": new_user.get('name'),
-        "age": new_user.get('age'),
-        "city": new_user.get('city')
+    
+    users[req_data["username"]] = {
+        "name": req_data["name"],
+        "age": req_data["age"],
+        "city": req_data["city"]
     }
-    return jsonify({"message": "User added", "user": users[username]}), 200
+    
+
+    outputs = {
+        "username": req_data["username"],
+        "name": req_data["name"],
+        "age": req_data["age"],
+        "city": req_data["city"]        
+    }
+    return jsonify({"message": "User added", "user": outputs}), 201
 
 # Run the Flask development server
 if __name__ == "__main__":
-    app.run(port=5000)
+    app.run(host='localhost', port=5000, debug=True)
