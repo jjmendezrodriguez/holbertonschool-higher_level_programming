@@ -225,3 +225,7 @@ print('Response Body:', response.json())
 
 3. [Develop a simple API using Python with the `http.server` module](./task_03_http_server.py)
 
+4. [Develop a Simple API using Python with Flask](./task_04_flask.py)
+
+5. [API Security and Authentication Techniques](./task_05_basic_security.py)
+
