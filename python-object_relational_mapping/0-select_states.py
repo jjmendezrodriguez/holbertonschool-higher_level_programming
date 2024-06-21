@@ -8,11 +8,7 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
-    """
-    Connects to a MySQL server running on localhost at port 3306.
-    Takes three arguments: mysql username, mysql password, and database name.
-    Executes a query to fetch all states from the database and prints each row.
-    """
+
     db = MySQLdb.connect(host="localhost",
                         user=argv[1],
                         passwd=argv[2],
