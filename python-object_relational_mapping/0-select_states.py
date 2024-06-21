@@ -1,51 +1,26 @@
 #!/usr/bin/python3
-"""list states in database"""
+"""
+This module connects to a MySQL database and retrieves
+all states sorted by id in ascending order.
+"""
+
 import MySQLdb
-import sys
-from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy import Column, Integer, String
-
-Base = declarative_base()
-
-class State(Base):
-    """base of the sql"""
-    __tablename__ = 'states'
-    id = Column(Integer, primary_key=True, nullable=False)
-    name = Column(String(256), nullable=False)
-
-def list_states(username, password, dbname):
-    """connects to mysql database"""
-    # create a connection string
-    conn_str = f"mysql+mysqldb://{username}:{password}@localhost:3306/{dbname}"
-
-    # create an engine
-    engine = create_engine(conn_str)
-
-    # create a configured "Session" class
-    Session = sessionmaker(bind=engine)
-
-    # create a Session
-    session = Session()
-
-    # query all states and order by id
-    states = session.query(State).order_by(State.id.asc()).all()
-
-    # print each state
-    for state in states:
-        print(f"({state.id}, '{state.name}')")
-
-    session.close()
+from sys import argv
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print("Usage: ./0-select_states.py <mysql_username> <mysql_password> <database_name>")
-    else:
-        # get command line arg
-        username = sys.argv[1]
-        password = sys.argv[2]
-        dbname = sys.argv[3]
-
-        # call the function to list states
-        list_states(username, password, dbname)
+    """
+    Connects to a MySQL server running on localhost at port 3306.
+    Takes three arguments: mysql username, mysql password, and database name.
+    Executes a query to fetch all states from the database and prints each row.
+    """
+    db = MySQLdb.connect(host="localhost",
+                        user=argv[1],
+                        passwd=argv[2],
+                        db=argv[3])
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
+    cur.close()
+    db.close()
