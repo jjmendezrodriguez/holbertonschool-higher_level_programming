@@ -1,46 +1,47 @@
 #!/usr/bin/python3
-"""List all states with a name starting with N from the database hbtn_0e_0_usa"""
+"""
+Module to list all states with a name starting
+with 'N' from the database hbtn_0e_0_usa
+"""
+import MySQLdb
 import sys
-from sqlalchemy import create_engine, Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
 
-Base = declarative_base()
 
-class State(Base):
-    """State class mapped to the states table"""
-    __tablename__ = 'states'
-    id = Column(Integer, primary_key=True, nullable=False)
-    name = Column(String(256), nullable=False)
+def filter_states(username, password, dbname):
+    """
+    Connects to the database and prints all states with a name
+    starting with 'N' sorted by id.
+    """
+    # Connect to the MySQL database
+    db = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=username,
+        passwd=password,
+        db=dbname
+    )
+    cursor = db.cursor()
 
-def list_states_starting_with_N(username, password, dbname):
-    """Connects to MySQL database and lists states starting with N"""
-    # Create a connection string
-    conn_str = f"mysql+mysqldb://{username}:{password}@localhost:3306/{dbname}"
-    
-    # Create an engine
-    engine = create_engine(conn_str)
-    
-    # Create a configured "Session" class
-    Session = sessionmaker(bind=engine)
-    
-    # Create a session
-    session = Session()
-    
-    # Query all states with a name starting with N and order by id
-    states = session.query(State).filter(State.name.like('N%')).order_by(State.id.asc()).all()
-    
+    # Execute the SQL query
+    query = ("SELECT id, name FROM states WHERE name LIKE BINARY 'N%' "
+             "ORDER BY id ASC")
+    cursor.execute(query)
+
+    # Fetch all the results
+    states = cursor.fetchall()
+
     # Print each state
     for state in states:
-        print(f"({state.id}, '{state.name}')")
-    
-    session.close()
+        print(f"({state[0]}, '{state[1]}')")
+
+    # Close the cursor and connection
+    cursor.close()
+    db.close()
+
 
 if __name__ == "__main__":
-        # Get command line arguments
+    if len(sys.argv) == 4:
         username = sys.argv[1]
         password = sys.argv[2]
         dbname = sys.argv[3]
-        
-        # Call the function to list states
-        list_states_starting_with_N(username, password, dbname)
+        filter_states(username, password, dbname)
