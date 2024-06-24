@@ -9,16 +9,18 @@ from sqlalchemy import Column, Integer, String
 
 Base = declarative_base()
 
+
 class State(Base):
     """base of the sql"""
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, nullable=False)
     name = Column(String(256), nullable=False)
 
+
 def list_states(username, password, dbname):
     """connects to mysql database"""
     # create a connection string
-    conn_str = f"mysql+mysqldb://{username}:{password}@localhost:3306/{dbname}"
+    conn_str = f"mysql+mysqldb://{username}:{password}@localhost/{dbname}"
 
     # create an engine
     engine = create_engine(conn_str)
@@ -37,6 +39,7 @@ def list_states(username, password, dbname):
         print(f"({state.id}, '{state.name}')")
 
     session.close()
+
 
 if __name__ == "__main__":
     # get command line arg
