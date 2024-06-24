@@ -37,9 +37,6 @@ def list_states_matching_name(username, password, dbname, state_name):
     session.close()
 
 if __name__ == "__main__":
-    if len(sys.argv) != 5:
-        print("Usage: ./list_states_matching_name.py <mysql_username> <mysql_password> <database_name> <state_name>")
-    else:
         # Get command line arguments
         username = sys.argv[1]
         password = sys.argv[2]
