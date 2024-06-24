@@ -1,74 +1,50 @@
 #!/usr/bin/python3
 """
-This module connects to a MySQL database and retrieves
-all cities of a given state, sorted by id in ascending order,
-safe from SQL injections.
+Module to list all cities of a given state from the database hbtn_0e_4_usa,
+safe from SQL injection.
 """
-
+import MySQLdb
 import sys
-from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker, relationship
 
-Base = declarative_base()
-
-class State(Base):
-    """
-    State class mapped to the states table
-    """
-    __tablename__ = 'states'
-    id = Column(Integer, primary_key=True, nullable=False)
-    name = Column(String(256), nullable=False)
-
-class City(Base):
-    """
-    City class mapped to the cities table
-    """
-    __tablename__ = 'cities'
-    id = Column(Integer, primary_key=True, nullable=False)
-    name = Column(String(256), nullable=False)
-    state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
-    state = relationship("State")
 
 def list_cities_by_state(username, password, dbname, state_name):
     """
-    Connects to MySQL database and lists all cities of the given state
-    Args:
-        username (str): The MySQL username
-        password (str): The MySQL password
-        dbname (str): The name of the database
-        state_name (str): The name of the state to search for
+    Connects to the database and prints all cities of a given state,
+    sorted by cities.id. This function is safe from SQL injection.
     """
-    # Create a connection string
-    conn_str = f"mysql+mysqldb://{username}:{password}@localhost:3306/{dbname}"
-    
-    # Create an engine
-    engine = create_engine(conn_str)
-    
-    # Create a configured "Session" class
-    Session = sessionmaker(bind=engine)
-    
-    # Create a session
-    session = Session()
-    
-    # Query cities of the given state and order by city id
-    cities = session.query(City).join(State).filter(State.name == state_name).order_by(City.id.asc()).all()
-    
+    # Connect to the MySQL database
+    db = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=username,
+        passwd=password,
+        db=dbname
+    )
+    cursor = db.cursor()
+
+    # Execute the SQL query using parameterized queries
+    query = ("SELECT cities.name FROM cities "
+             "JOIN states ON cities.state_id = states.id "
+             "WHERE states.name = %s "
+             "ORDER BY cities.id ASC")
+    cursor.execute(query, (state_name,))
+
+    # Fetch all the results
+    cities = cursor.fetchall()
+
     # Print each city
-    for city in cities:
-        print(f"({city.id}, '{city.name}', {city.state_id})")
-    
-    session.close()
+    city_names = [city[0] for city in cities]
+    print(", ".join(city_names))
+
+    # Close the cursor and connection
+    cursor.close()
+    db.close()
+
 
 if __name__ == "__main__":
-    if len(sys.argv) != 5:
-        print("Usage: ./list_cities_by_state.py <mysql_username> <mysql_password> <database_name> <state_name>")
-    else:
-        # Get command line arguments
+    if len(sys.argv) == 5:
         username = sys.argv[1]
         password = sys.argv[2]
         dbname = sys.argv[3]
         state_name = sys.argv[4]
-        
-        # Call the function to list cities
         list_cities_by_state(username, password, dbname, state_name)
