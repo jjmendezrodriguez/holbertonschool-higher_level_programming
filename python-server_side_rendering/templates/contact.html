@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Flask App</title>
+    <title>Contact Us - My Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    {% include "header.html" %}
-    
+    {% include 'header.html' %}
     <h1>Contact Us</h1>
-    <p>If you have questions, feel free to Contact Us for Flask App.</p>
-    
-    {% include "footer.html" %}
+    <p>This page provides contact information.</p>
+    {% include 'footer.html' %}
 </body>
 </html>
