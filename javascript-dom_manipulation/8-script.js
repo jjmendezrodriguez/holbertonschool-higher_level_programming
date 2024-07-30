@@ -1,7 +1,15 @@
-const header = document.querySelector('header');
+const url = 'https://hellosalut.stefanbohacek.dev/?lang=fr';
 
-const redHeader = document.getElementById('red_header');
+const fetchHello = () => {
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const helloElement = document.getElementById('hello');
+      helloElement.textContent = data.hello;
+    })
+    .catch(error => {
+      console.error('Error fetching the hello translation:', error);
+    });
+};
 
-redHeader.addEventListener('click', () => {
-  header.classList.add('red');
-});
+document.addEventListener('DOMContentLoaded', fetchHello);
